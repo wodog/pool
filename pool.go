@@ -66,7 +66,7 @@ func NewDefault(factory func() (io.Closer, error)) (*Pool, error) {
 	c := Config{
 		InitialCap: 1,
 		MaxCap:     10,
-		Timeout:    1 * time.Hour,
+		Timeout:    5 * time.Minute,
 		Factory:    factory,
 	}
 	return New(c)
