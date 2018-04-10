@@ -1,0 +1,14 @@
+pipeline:
+  backend:
+    image: golang
+    commands:
+      - go get
+      - go build
+      - go test
+
+  publish:
+    image: plugins/docker
+    repo: wodog/pool
+    auto_tag: true
+    username: wodog
+    password: nishizhu
